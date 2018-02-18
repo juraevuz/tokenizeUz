@@ -20,7 +20,6 @@ function createMap(text){
 	var text = text.replace(/[aoueiŏ]/g,"V");
 	var text = text.replace(/[bdfghjklmnpqrstvxyzğšč]/g,"C");
 	var parts = text.split("’");
-	
 	var map = [];
 	
 	parts.forEach(function(v,k){
@@ -57,6 +56,9 @@ function createMap(text){
 					map.push(4);
 					rem = rem.slice(4);
 				} else if (rem[0] == "C" && rem[1] == "C" && rem[2] == "V" && rem[3] != "C"){
+					map.push(3);
+					rem = rem.slice(3);
+				} else if (rem[0] == "C" && rem[1] == "C" && rem[2] == "V" && rem[3] == "C" && rem[4] == "V"){
 					map.push(3);
 					rem = rem.slice(3);
 				} else if (rem[0] == "C" && rem[1] == "C" && rem[2] == "V" && rem[3] == "C" && rem[4] != "V" && rem[5] != "C"){
