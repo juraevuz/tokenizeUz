@@ -77,7 +77,7 @@ function createMap(text){
 	return map;
 }
 
-function mainFunc(word) {
+function tokenize(field, word) {
 	var rgx = /^[abdefghijklmnopqrstuvxyzŏğšč’]+$/;
 	var word = autoCorrect(word).trim();
 	var map = createMap(word);
@@ -106,13 +106,5 @@ function mainFunc(word) {
 	
 	r = inverseCorrect(r);
 	
-	return r;
+	field.value = r;
 }
-
-
-
-
-
-
-
-
