@@ -4,8 +4,20 @@
 		<script src="js_code.js"></script>
 	</head>
 	<body>
-		<script>
-			document.write(mainFunc("bo'g'inlash"));
-		</script>
+		<h1>O'zbek tilidagi so'zlarni bo'g'inlarga ajratish algoritmi</h1>
+		<label>So'zni kiriting</label>
+		<br>
+		<input id="word" type="text" placeholder="Masalan: favvora" style="width:100%;"/>
+		<br>
+		<br>
+		<button onclick="tokenize(document.getElementById('result'), document.getElementById('word').value)">O'girish</button>
+		<br>
+		<br>
+		<label>Natija</label>
+		<br>
+		<input id="result" style="width:100%;"/>
+		<br>
+		<br>
+		<a href="https://github.com/juraevuz/tokenizeUz">Algoritm kodi (GitHub)</a>
 	</body>
 </html>
